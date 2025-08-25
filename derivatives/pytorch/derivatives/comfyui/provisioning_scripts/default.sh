@@ -203,7 +203,7 @@ function provisioning_download() {
     #     wget -c --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     # fi
     if [[ $1 =~ ^https://.*civitai\.com ]] ; then
-        wget --content-disposition -P "$2&token=$CIVITAI_TOKEN" "$1"
+        wget --content-disposition -P "$2" "$1&token=$CIVITAI_TOKEN"
     else
         wget --content-disposition -P "$2" "$1"
     fi
