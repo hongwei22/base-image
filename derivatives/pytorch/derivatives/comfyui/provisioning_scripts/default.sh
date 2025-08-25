@@ -18,6 +18,14 @@ PIP_PACKAGES=(
 NODES=(
     #"https://github.com/ltdrdata/ComfyUI-Manager"
     #"https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/cozymantis/human-parser-comfyui-node"
+    "https://github.com/kijai/ComfyUI-WanVideoWrapper"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/city96/ComfyUI-GGUF"
 )
 
 WORKFLOWS=(
@@ -28,13 +36,25 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16"
 )
 
+DIFFUSION_MODELS=(
+    "https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/I2V/Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors?download=true"
+    "https://civitai.com/api/download/models/1085456?type=Model&format=SafeTensor&size=full&fp=fp8"
+)
+
+SCHP=(
+    "https://drive.usercontent.google.com/download?id=1k4dllHpu0bdx38J7H28rVVLpU-kOHmnH&export=download&authuser=0&confirm=t"
+
 UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://huggingface.co/lightx2v/Wan2.1-I2V-14B-480P-StepDistill-CfgDistill-Lightx2v/resolve/main/loras/Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors?download=true"
+    "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors?download=true"
+    "https://civitai.com/api/download/models/981081?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
+    "https://huggingface.co/lovis93/testllm/resolve/main/ae.safetensors?download=true"
 )
 
 ESRGAN_MODELS=(
@@ -54,6 +74,9 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_files \
+        "${COMFYUI_DIR}/models/diffusion_models" \
+        "${DIFFUSION_MODELS[@]}"
+    provisioning_get_files \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_files \
@@ -68,6 +91,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFUI_DIR}/models/schp" \
+        "${SCHP[@]}"
     provisioning_print_end
 }
 
