@@ -191,16 +191,21 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
-    if [[ -n $HF_TOKEN && $1 =~ ^https://.*huggingface\.co ]]; then
-        auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://.*civitai\.com ]]; then
-        auth_token="$CIVITAI_TOKEN"
-    fi
-    if [[ -n $auth_token ]];then
-        wget --header="Authorization: Bearer $auth_token" -c --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    # if [[ -n $HF_TOKEN && $1 =~ ^https://.*huggingface\.co ]]; then
+    #     auth_token="$HF_TOKEN"
+    # elif 
+    #     [[ -n $CIVITAI_TOKEN && $1 =~ ^https://.*civitai\.com ]]; then
+    #     auth_token="$CIVITAI_TOKEN"
+    # fi
+    # if [[ -n $auth_token ]];then
+    #     wget --header="Authorization: Bearer $auth_token" -c --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    # else
+    #     wget -c --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    # fi
+    if [[ $1 =~ ^https://.*civitai\.com ]] ; then
+        wget --content-disposition -P "$2&token=$CIVITAI_TOKEN" "$1"
     else
-        wget -c --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget --content-disposition -P "$2" "$1"
     fi
 }
 
