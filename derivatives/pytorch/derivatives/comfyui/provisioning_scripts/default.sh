@@ -44,6 +44,7 @@ DIFFUSION_MODELS=(
 
 SCHP=(
     "https://drive.usercontent.google.com/download?id=1k4dllHpu0bdx38J7H28rVVLpU-kOHmnH&export=download&authuser=0&confirm=t"
+)
 
 UNET_MODELS=(
 )
