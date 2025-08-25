@@ -26,6 +26,7 @@ NODES=(
     "https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/city96/ComfyUI-GGUF"
+    "https://github.com/crystian/ComfyUI-Crystools"
 )
 
 WORKFLOWS=(
