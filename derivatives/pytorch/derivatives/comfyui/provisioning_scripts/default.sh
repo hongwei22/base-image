@@ -27,6 +27,7 @@ NODES=(
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/city96/ComfyUI-GGUF"
     "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/SLAPaper/ComfyUI-Image-Selector"
 )
 
 WORKFLOWS=(
