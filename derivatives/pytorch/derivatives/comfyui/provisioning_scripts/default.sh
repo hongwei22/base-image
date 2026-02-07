@@ -50,6 +50,7 @@ DIFFUSION_MODELS=(
     #"https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors?download=true"
     #"https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Wan22Animate/Wan2_2-Animate-14B_fp8_scaled_e5m2_KJ_v2.safetensors?download=true"
     #"https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors?download=true"
+    "https://civitai.com/api/download/models/2612554?type=Model&format=SafeTensor&size=full&fp=bf16"
     "https://civitai.com/api/download/models/2606187?type=Model&format=SafeTensor&size=pruned&fp=fp8"
 )
 
@@ -69,6 +70,7 @@ LORA_MODELS=(
     #"https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/low_noise_model.safetensors?download=true"
     #"https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors?download=true"
     "https://civitai.com/api/download/models/2653561?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2646182?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
@@ -126,7 +128,7 @@ function provisioning_start() {
         "${CLIP_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/text_encoders" \
-        "${TEXT_ENCODER_MODES[@]}"
+        "${TEXT_ENCODER_MODELS[@]}"
     provisioning_print_end
 }
 
