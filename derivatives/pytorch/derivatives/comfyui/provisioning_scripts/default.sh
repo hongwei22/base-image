@@ -50,7 +50,7 @@ DIFFUSION_MODELS=(
     #"https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors?download=true"
     #"https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Wan22Animate/Wan2_2-Animate-14B_fp8_scaled_e5m2_KJ_v2.safetensors?download=true"
     #"https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors?download=true"
-    "https://civitai.com/api/download/models/2612554?type=Model&format=SafeTensor&size=full&fp=bf16"
+    #"https://civitai.com/api/download/models/2612554?type=Model&format=SafeTensor&size=full&fp=bf16"
     "https://civitai.com/api/download/models/2606187?type=Model&format=SafeTensor&size=pruned&fp=fp8"
 )
 
