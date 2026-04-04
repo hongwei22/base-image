@@ -69,8 +69,10 @@ LORA_MODELS=(
     #"https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/high_noise_model.safetensors?download=true"
     #"https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/low_noise_model.safetensors?download=true"
     #"https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors?download=true"
-    "https://civitai.com/api/download/models/2653561?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/2646182?type=Model&format=SafeTensor"
+    #"https://civitai.com/api/download/models/2653561?type=Model&format=SafeTensor"
+    #"https://civitai.com/api/download/models/2646182?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2818111?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/2753532?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
