@@ -51,7 +51,7 @@ DIFFUSION_MODELS=(
     #"https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Wan22Animate/Wan2_2-Animate-14B_fp8_scaled_e5m2_KJ_v2.safetensors?download=true"
     #"https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors?download=true"
     #"https://civitai.com/api/download/models/2612554?type=Model&format=SafeTensor&size=full&fp=bf16"
-    #"https://civitai.com/api/download/models/2606187?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+    "https://civitai.com/api/download/models/2606187?type=Model&format=SafeTensor&size=pruned&fp=fp8"
     "https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors?download=true"
     "https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors?download=true"
 )
@@ -76,14 +76,14 @@ LORA_MODELS=(
     #"https://civitai.com/api/download/models/2818111?type=Model&format=SafeTensor"
     #"https://civitai.com/api/download/models/2753532?type=Model&format=SafeTensor"
     #"https://civitai.com/api/download/models/2810006?type=Model&format=SafeTensor"
-    #"https://civitai.red/api/download/models/2960556?fileId=2839878"
+    "https://civitai.red/api/download/models/2960556?fileId=2839878"
     "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Stable-Video-Infinity/v2.0/SVI_v2_PRO_Wan2.2-I2V-A14B_HIGH_lora_rank_128_fp16.safetensors?download=true"
     "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Stable-Video-Infinity/v2.0/SVI_v2_PRO_Wan2.2-I2V-A14B_LOW_lora_rank_128_fp16.safetensors?download=true"
 )
 
 VAE_MODELS=(
     "https://huggingface.co/lovis93/testllm/resolve/main/ae.safetensors?download=true"
-    #"https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors?download=true"
+    "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors?download=true"
 )
 
 ESRGAN_MODELS=(
@@ -97,7 +97,7 @@ CLIP_MODELS=(
 )
 
 TEXT_ENCODER_MODELS=(
-    #"https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-9b/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors?download=true"
+    "https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-9b/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors?download=true"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
