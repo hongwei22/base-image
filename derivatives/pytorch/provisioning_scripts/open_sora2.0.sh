@@ -1,5 +1,5 @@
 #!/bin/bash 
-set -eou pipefail
+set -euo pipefail
 
 apt-get install -y libaio-dev
 
@@ -13,13 +13,12 @@ sed -i '/^torch/d; /^torchvision/d' /workspace/Open-Sora/requirements.txt
 
 pip install -vv /workspace/Open-Sora/
 
-pip install torch=="${PYTORCH_VERSION}" xformers --index-url "${PYTORCH_INDEX_URL}"
 pip install flash-attn --no-build-isolation
 
 cd /tmp
 git clone https://github.com/hpcaitech/TensorNVMe.git && cd TensorNVMe
 pip install -r requirements.txt
-pip install -v --no-cache-dir .
+pip install -v --no-cache-dir . --no-build-isolation
 
 cd /workspace/Open-Sora
 
@@ -516,8 +515,6 @@ stdout_events_enabled=true
 stdout_logfile_maxbytes=0
 stdout_logfile_backups=0
 EOL
-
-python -c "import transformers; transformers.utils.move_cache()"
 
 # Update supervisor to start the new service
 supervisorctl reread
